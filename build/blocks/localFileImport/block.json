@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "inseri-core/file-drop",
+  "title": "Local File Import",
+  "category": "inseri",
+  "description": "Let guests provide their own data for blocks.",
+  "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "mainText": {
+      "type": "string",
+      "default": "Select file"
+    },
+    "subText": {
+      "type": "string",
+      "default": "Drag and drop here"
+    },
+    "accepts": {
+      "type": "array",
+      "default": []
+    },
+    "multiple": {
+      "type": "boolean",
+      "default": false
+    },
+    "height": {
+      "type": "integer",
+      "default": 150
+    },
+    "metadata": {
+      "type": "object",
+      "default": {
+        "name": ""
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "alignWide": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "inseri-core",
+  "editorScript": [
+    "file:./index.js",
+    "inseri-core-editor"
+  ],
+  "viewScript": [
+    "file:./hydration.js"
+  ],
+  "style": [
+    "file:./index.css"
+  ],
+  "script": "inseri-core"
+}

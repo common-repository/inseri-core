@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "inseri-core/plotly",
+  "title": "Plotly Chart",
+  "category": "inseri",
+  "description": "Visualize the data of another block using Plotly.",
+  "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "inputFull": {
+      "type": "string",
+      "default": ""
+    },
+    "inputData": {
+      "type": "string",
+      "default": ""
+    },
+    "inputLayout": {
+      "type": "string",
+      "default": ""
+    },
+    "inputConfig": {
+      "type": "string",
+      "default": ""
+    },
+    "height": {
+      "type": "integer",
+      "default": 500
+    },
+    "outputs": {
+      "type": "array",
+      "default": []
+    },
+    "metadata": {
+      "type": "object",
+      "default": {
+        "name": ""
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "alignWide": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "inseri-core",
+  "editorScript": [
+    "file:./index.js",
+    "inseri-core-editor"
+  ],
+  "viewScript": [
+    "file:./hydration.js"
+  ],
+  "style": [
+    "file:./index.css"
+  ],
+  "script": "inseri-core"
+}

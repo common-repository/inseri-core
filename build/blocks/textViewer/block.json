@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "inseri-core/text-viewer",
+  "title": "Text Viewer",
+  "category": "inseri",
+  "description": "Display text content like JSON, XML or HTML from other block.",
+  "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "inputKey": {
+      "type": "string",
+      "default": ""
+    },
+    "height": {
+      "type": "integer",
+      "default": 150
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": ""
+    },
+    "metadata": {
+      "type": "object",
+      "default": {
+        "name": ""
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "alignWide": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "inseri-core",
+  "editorScript": [
+    "file:./index.js",
+    "inseri-core-editor"
+  ],
+  "viewScript": [
+    "file:./hydration.js"
+  ],
+  "style": [
+    "file:./index.css"
+  ],
+  "script": "inseri-core"
+}

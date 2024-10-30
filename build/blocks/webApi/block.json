@@ -1,0 +1,111 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "inseri-core/web-api",
+  "title": "Web API",
+  "category": "inseri",
+  "description": "Call a web API and share the data with other blocks.",
+  "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "outputContenType": {
+      "type": "string",
+      "default": ""
+    },
+    "inputMethodUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "inputQueryParams": {
+      "type": "string",
+      "default": ""
+    },
+    "inputHeadersParams": {
+      "type": "string",
+      "default": ""
+    },
+    "inputBody": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Call Web API"
+    },
+    "isVisible": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoTrigger": {
+      "type": "boolean",
+      "default": true
+    },
+    "isContentTypeLock": {
+      "type": "boolean",
+      "default": false
+    },
+    "pid": {
+      "type": "object",
+      "default": {
+        "type": "",
+        "identifier": ""
+      }
+    },
+    "requestParams": {
+      "type": "object",
+      "default": {
+        "method": "GET",
+        "url": "",
+        "queryParams": [
+          {
+            "isChecked": true,
+            "key": "",
+            "value": ""
+          }
+        ],
+        "headerParams": [
+          {
+            "isChecked": true,
+            "key": "",
+            "value": ""
+          }
+        ],
+        "bodyType": "none",
+        "textBody": "",
+        "paramsBody": [
+          {
+            "isChecked": true,
+            "key": "",
+            "value": ""
+          }
+        ]
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "default": {
+        "name": ""
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "alignWide": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "inseri-core",
+  "editorScript": [
+    "file:./index.js",
+    "inseri-core-editor"
+  ],
+  "viewScript": [
+    "file:./hydration.js"
+  ],
+  "script": "inseri-core"
+}

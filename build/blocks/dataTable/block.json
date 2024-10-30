@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "inseri-core/data-table",
+  "title": "Data Table",
+  "category": "inseri",
+  "description": "Display data table using the other block's data.",
+  "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "inputColumns": {
+      "type": "string",
+      "default": ""
+    },
+    "inputData": {
+      "type": "string",
+      "default": ""
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "enableTopToolbar": true,
+        "enableBottomToolbar": true,
+        "enableColumnActions": true,
+        "enableSorting": true,
+        "enableColumnOrdering": false,
+        "enableRowVirtualization": false,
+        "enableGlobalFilter": true,
+        "enableColumnFilters": false,
+        "enableHiding": true,
+        "enableDensityToggle": true,
+        "enableFullScreenToggle": true,
+        "enablePagination": true
+      }
+    },
+    "extraOptions": {
+      "type": "object",
+      "default": {
+        "enableRowClick": true,
+        "enableCellClick": true,
+        "enableEditing": false
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "default": {
+        "name": ""
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "alignWide": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "inseri-core",
+  "editorScript": [
+    "file:./index.js",
+    "inseri-core-editor"
+  ],
+  "viewScript": [
+    "file:./hydration.js"
+  ],
+  "script": "inseri-core"
+}

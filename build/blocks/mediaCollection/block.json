@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "inseri-core/media-collection",
+  "title": "Media Collection",
+  "category": "inseri",
+  "description": "Make a collection of media files available as data for other blocks.",
+  "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": "Choose a file"
+    },
+    "fileIds": {
+      "type": "array",
+      "default": []
+    },
+    "selectedFileId": {
+      "type": "string",
+      "default": null
+    },
+    "isVisible": {
+      "type": "boolean",
+      "default": true
+    },
+    "metadata": {
+      "type": "object",
+      "default": {
+        "name": ""
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "alignWide": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "inseri-core",
+  "editorScript": [
+    "file:./index.js",
+    "inseri-core-editor"
+  ],
+  "viewScript": [
+    "file:./hydration.js"
+  ],
+  "style": [
+    "file:./index.css"
+  ],
+  "script": "inseri-core"
+}
